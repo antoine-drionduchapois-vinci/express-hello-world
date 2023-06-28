@@ -1,0 +1,165 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Candara", Arial, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: "oooh baby", Arial, sans-serif;
+        font-size: 20vh;
+    }
+
+    .formcontainer {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    form {
+        background-color: white;
+        padding: 20px;
+        color: #572231;
+        font-weight: lighter;
+    }
+
+    form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: lighter;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #572231;
+        font-weight: lighter;
+    }
+
+    form input[type="submit"] {
+        font-size: 3vw;
+        background-color: white;
+        color: #572231;
+        cursor: pointer;
+        font-weight: lighter;
+    }
+
+    /* Media query for laptop size */
+    @media (min-width: 768px) {
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="submit"] {
+            width: calc(50% - 5px);
+        }
+        
+        form label.inline-labels {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: lighter;
+        }
+
+        form .radio-container {
+            display: flex;
+            align-items: center;
+        }
+
+        form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #containerForm {
+            display: flex;
+            justify-content: center;
+        }
+
+        #imgContainer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+        }
+    }
+
+    /* Media query for phone size */
+    @media (max-width: 767px) {
+        #imgContainer {
+            display: none;
+        }
+          h1 {
+        font-family: "oooh baby", Arial, sans-serif;
+        font-size: 10vh;
+    }
+    }
+
+
+
+       .navbar {
+          
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #28618E;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Candara", Arial, sans-serif;
+            font-size: 18px;
+        }
+
+       
+
+        @media (max-width: 600px) {
+            .navbar {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar a {
+                display: block;
+            }
+        }
+
+</style>
+
+
+
+<header>
+
+     <div class="navbar">
+        <a href="dresscode">Dresscode</a>
+        <a href="/home">Planning</a>
+        <a href="/rsvp">RSVP</a>
+    </div>
+
+</header>
+
+<div class="formcontainer">
+    <div id="imgContainer">
+ 
+    </div>
+    <form action="/add" method="post">
+        <h1>RSVP</h1>
+        <label>First Name</label>
+        <input type="text" name="firstname" required><br>
+        <label>Last Name</label>
+        <input type="text" name="lastname" required><br>
+        <label>Email</label>
+        <input type="email" name="email" required><br>
+        <label>Other request?</label>
+        <input type="text" name="word" ><br>
+        <label>Are you coming?</label><br>
+        <div id="containerForm">
+            <input type="radio" name="answer" value="yes" required style="margin: 10px;">
+            <label>Yes</label><br>
+            <input type="radio" name="answer" value="no" required style="margin: 10px;">
+            <label>No</label><br>
+        </div>
+        <input id="button" type="submit" value="Send" style="font-size: 3vw;">
+    </form>
+</div>

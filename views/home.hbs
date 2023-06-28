@@ -1,0 +1,135 @@
+<header>
+
+     <div class="navbar">
+        <a href="dresscode">Dresscode</a>
+        <a href="/home">Planning</a>
+        <a href="/rsvp">RSVP</a>
+    </div>
+
+</header>
+
+<style>
+    body {
+        padding: 30px;
+        position: relative;
+        
+    }
+
+    h4 {
+        color: #28618E;
+        font-family: "Candara", Arial; 
+        font-weight: light;
+        position: absolute;
+
+    }
+   
+
+    #image-container {
+      position: absolute;
+    }
+
+     body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+          
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #28618E;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Candara", Arial, sans-serif;
+            font-size: 18px;
+        }
+
+       
+
+        @media (max-width: 600px) {
+            .navbar {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar a {
+                display: block;
+            }
+        }
+
+
+  
+</style>
+
+    {{#if day}}
+        
+
+        <div class="homeContainer">
+            
+            <h1 id="h1planning" style="color: #28618E;">Planning </h1>
+
+            <h2 id="h2titre" style="color: #28618E;">Ceremony</h2>
+            <p id="ptext" style="color: #28618E;">Saturday 2nd of September at 12h</p>
+            <p id="ptext" style="color: #28618E;">Onze-Lieve-Vrouw-Hemelvaartkerk in Damme</p>
+
+             <h2 id="h2titre" style="color: #28618E;">Party</h2>
+            <p id="ptext" style="color: #28618E;">Saturday 2nd of September at 13h30</p>
+            <p id="ptext" style="color: #28618E;">Spijkersdreef 13, 830 Sint-Kruis</p>
+
+
+
+         
+            <a id="anchorRSVP" href="/rsvp" style="color: #28618E;">RSVP</a>
+
+              
+
+         
+        </div>
+
+        <img src="..\images\5.png" class="image-container">
+
+
+
+        
+      
+
+        {{else}}
+           
+        <div class="homeContainer">
+            
+            <h1 id="h1planning" style="color: #572231;">Planning </h1>
+
+            <h2 id="h2titre" style="color: #572231;">Ceremony</h2>
+            <p id="ptext">Saturday 2nd of September at 12h</p>
+            <p id="ptext">Onze-Lieve-Vrouw-Hemelvaartkerk in Damme</p>
+
+             <h2 id="h2titre" style="color: #572231;">Lunch</h2>
+            <p id="ptext">Sunday 3rd of September at 12h</p>
+            <p id="ptext">Spijkersdreef 13, 830 Sint-Kruis</p>
+
+
+
+         
+            <a id="anchorRSVP" href="/rsvp" style="color: #572231;">RSVP</a>
+
+
+           
+
+         
+        </div>
+
+        <img  src="..\images\6.png" class="image-container" >
+
+    {{/if}}
+
+
+
+
+
+</p>
